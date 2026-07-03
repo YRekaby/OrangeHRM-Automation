@@ -84,4 +84,10 @@ public class BasePage {
             return text != null && !text.trim().isEmpty();
         });
     }
+
+    private final By successToast = By.cssSelector(".oxd-toast.oxd-toast--success");
+    public void waitForSuccessToast() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(successToast));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(successToast));
+    }
 }

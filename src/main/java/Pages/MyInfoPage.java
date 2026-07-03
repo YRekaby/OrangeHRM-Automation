@@ -21,7 +21,8 @@ public class MyInfoPage extends BasePage {
     private final By stateField = By.xpath("//label[normalize-space()='State/Province']/ancestor::div[contains(@class,'oxd-input-group')]//input");
     private final By zipCodeField = By.xpath("//label[normalize-space()='Zip/Postal Code']/ancestor::div[contains(@class,'oxd-input-group')]//input");
     private final By mobileField = By.xpath("//label[normalize-space()='Mobile']/parent::div/following-sibling::div/input");
-    private final By contactDetailsSaveButton = By.xpath("(//button[@type='submit'])[1]");
+    private final By contactDetailsSaveButton = By.cssSelector("form button[type='submit']");
+
 
     private final By emergencyContactsAddButton = By.xpath("//button[normalize-space()='Add']");
     private final By emergencyNameField = By.xpath("//label[normalize-space()='Name']/parent::div/following-sibling::div/input");
@@ -91,10 +92,10 @@ public class MyInfoPage extends BasePage {
         type(stateField, employee.getState());
         type(zipCodeField, employee.getZipCode());
         type(mobileField, employee.getMobile());
-
+        System.out.println("About to click Save...");
         click(contactDetailsSaveButton);
-
         waitUntilUpdated();
+        waitForSuccessToast();
     }
 
     public void openEmergencyContacts() {

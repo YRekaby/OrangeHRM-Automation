@@ -90,7 +90,7 @@ public class TimesheetStepDef {
 
     @Then("Timesheet should be approved successfully")
     public void timesheetShouldBeApprovedSuccessfully() {
-
         Assert.assertTrue(timePage.getTimesheetStatus().contains("Approved"));
+
     }
 }

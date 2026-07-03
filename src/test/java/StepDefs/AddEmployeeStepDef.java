@@ -6,13 +6,15 @@ import Pages.*;
 import Utils.DriverFactory;
 import Utils.ExcelManager;
 import Utils.JsonFileManager;
+import Utils.LoggerUtil;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AddEmployeeStepDef {
-
+    private static final Logger logger = LoggerUtil.getLogger(AddEmployeeStepDef.class);
     private LoginPage loginPage;
     private DashboardPage dashboardPage;
     private PIMPage pimPage;
