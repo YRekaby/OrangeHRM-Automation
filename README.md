@@ -517,6 +517,13 @@ This includes the browser to use, the site URL, and the admin login — effectiv
 - **One scenario, one clear purpose.** Keep each `.feature` scenario focused on a single, describable business outcome, matching the existing five scenarios' style.
 - **Test your changes locally** with `mvn test -Dtest=<YourRunner>` before considering the work done, and check the generated report to confirm the scenario behaves as expected, including on a failure path (e.g., temporarily break a locator to confirm the screenshot capture still works).
 
+### 🎥 Project Demo
+
+A complete walkthrough of the framework is available in the latest release:
+
+(https://github.com/YRekaby/OrangeHRM-Automation/releases)
+
+
 ---
 
 *This README was generated based on a full review of the project's source code, configuration, and test scenarios as of the current codebase state. If the project structure changes significantly, please update this document to keep it accurate.*
